@@ -10,4 +10,5 @@
 4. Copy
 	*  "development_tool/Default/Preferences.sublime-settings"
 	to your Sublime Text "Pakages/Default" folder
+    If the folder "Default" doesn't exists, copy "development_tool/Default" folder to your Sublime Text "Pakages/" folder.
 5. Restart Sublime Text
