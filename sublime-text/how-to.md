@@ -5,8 +5,8 @@
 2. Go to "Preferences" -> "Browse packages ..." then go to "User" folder.
 3. Copy the files
 	* "development_tool/User/Package Control.sublime-settings"
-	* "development_tool/User/Preferences.sublime-settings" 
+	* "development_tool/User/Preferences.sublime-settings"
 	 to your Sublime Text "Pakages/User" folder.
-4. Copy 
+4. Copy
 	*  "development_tool/Default/Preferences.sublime-settings"
 	to your Sublime Text "Pakages/Default" folder.
