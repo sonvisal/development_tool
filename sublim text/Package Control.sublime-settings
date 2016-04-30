@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"HTML-CSS-JS Prettify",
+		"HTMLBeautify",
+		"Java Property Cleaner",
+		"Javascript Beautify",
+		"Markdown Extended",
+		"Package Control",
+		"Pretty YAML",
+		"Theme - Nexus",
+		"TrailingSpaces"
+	]
+}
