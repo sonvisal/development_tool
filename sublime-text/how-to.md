@@ -1,4 +1,4 @@
-# Import the preferences to sublim text
+# Import the preferences to sublime text
 
 1. Open Sublime Text application
 2. Clone this repository https://github.com/sonvisal/development_tool.git
@@ -10,3 +10,4 @@
 4. Copy
 	*  "development_tool/Default/Preferences.sublime-settings"
 	to your Sublime Text "Pakages/Default" folder.
+5. Restart Sublime Text
