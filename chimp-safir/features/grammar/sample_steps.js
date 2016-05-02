@@ -55,7 +55,7 @@ module.exports = function () {
 	// 	assert_equal( $('img').length , btn ) ;
 	// });
 
-	this.Then(/^I try to connect with username "([^"]*)" and password "([^"]*)"$$/, function (user, pass) {
+	this.Then(/^I try to connect with username "([^"]*)" and password "([^"]*)"$/, function (user, pass) {
 		browser.waitForExist('.btn.btn-danger.btn_login');
 		browser.setValue('#username', user);
     	browser.setValue('#password', pass);
@@ -64,6 +64,15 @@ module.exports = function () {
 		// browser.waitForExist('body *');
 		// browser.waitForVisible('body *');
 		// browser.click('#logout-button-footer');
+	});
+
+	this.Then(/^I click on the button "([^"]*)"$/, function (btn) {
+		browser.click(btn);
+	});
+
+	// Inputs
+	this.Then(/^I fill the field "([^"]*)" with value "([^"]*)"$/, function (input, value) {
+		browser.setValue(input, value);
 	});
 
 };
