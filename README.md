@@ -1,3 +1,5 @@
 # Development tools
 
-TODO
+## Chimp
+## Chimp-Safir
+## Sublime-Text
