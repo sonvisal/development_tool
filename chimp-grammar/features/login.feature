@@ -1,4 +1,4 @@
-Feature: Tests de la page de connexion
+Feature: Test login page
 
   As a [role]
   I want [feature]
@@ -15,33 +15,33 @@ Feature: Tests de la page de connexion
   Background:
     Given I am not connected
 
-  @dev
-  Scenario: Vérifions le contenu de la page de connexion
-    When I navigate to "/login"
-    Then I should see the link "/register"
-    Then I should see the link "/forgot-password"
-    Then I should see the title "Srok Khmer - រៀនភាសាខ្មែរ - riən pʰiə.saa kʰmae - Apprendre la langue khmère - learn khmer language"
-    Then I should see the field "#username"
-    Then I should see the field "#password"
-    Then I should see the field "#remember-me"
-    Then I should see the button ".btn.btn-login"
-    Then I should see the button ".btn.btn-facebook"
-    Then I should see the button ".btn.btn-google"
-    Then I should see the button ".btn.btn-twitter"
+#  @dev
+#  Scenario: Check the login/register page content
+#    When I navigate to "/login"
+#    Then I should see the link "/register"
+#    Then I should see the link "/forgot-password"
+#    Then I should see the title "Srok Khmer - រៀនភាសាខ្មែរ - riən pʰiə.saa kʰmae - Apprendre la langue khmère - learn khmer language"
+#    Then I should see the field "#username"
+#    Then I should see the field "#password"
+#    Then I should see the field "#remember-me"
+#    Then I should see the button ".btn.btn-login"
+#    Then I should see the button ".btn.btn-facebook"
+#    Then I should see the button ".btn.btn-google"
+#    Then I should see the button ".btn.btn-twitter"
 
   @dev
-  Scenario: Testons un login valide
+  Scenario: Test a valid user
     When I navigate to "/login"
-    When I try to connect with username "tester01" and password "tester01"
+    When I try to connect with username "mama@gmail.com" and password "root"
     Then I should see the link "/home"
 
-  @dev
-  Scenario: Testons le message d'erreur d'erreur
-    When I navigate to "/login"
-    When I try to connect with username "" and password ""
-    When I try to connect with username "xyz" and password ""
-    When I try to connect with username "" and password "xyz"
-    When I try to connect with username "xyz" and password "xyz"
+#  @dev
+#  Scenario: Test the error message
+#    When I navigate to "/login"
+#    When I try to connect with username "" and password ""
+#    When I try to connect with username "xyz" and password ""
+#    When I try to connect with username "" and password "xyz"
+#    When I try to connect with username "xyz" and password "xyz"
 
   # This scenario will run as part of the Meteor dev cycle because it has the @dev tag
   # @focus
