@@ -6,10 +6,10 @@ Feature: Test member page
 
     @dev
     Scenario: member success
-        When I click menu  ".dropdown-toggle"
-        Then I click on url link "/member"
+        When I click on the button  ".dropdown-toggle"
+        Then I should see the link "/member"
         Then I should see class ".wapper-member-title"
-        Then I should see class "well-profile"
+        Then I should see class ".well-profile"
 
     @dev
     Scenario: member failed

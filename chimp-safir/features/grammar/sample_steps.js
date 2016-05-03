@@ -69,8 +69,10 @@ module.exports = function () {
 	this.Then(/^I click on the button "([^"]*)"$/, function (btn) {
 		browser.click(btn);
 	});
-
 	// Inputs
+	this.When (/^I am  select Gender" ([^"]*)"$/, function (url) {
+		browser.url(process.env.ROOT_URL+url);
+	});
 	this.Then(/^I fill the field "([^"]*)" with value "([^"]*)"$/, function (input, value) {
 		browser.setValue(input, value);
 		browser.click(".btn.btn-danger.btn_login");
