@@ -5,10 +5,9 @@ Feature: Test register page
     So that [benefit]
 
     @dev
-    Scenario: register success
-        When I url to "/login"
-        Then I should see class ".btn-register"
-        Then I should see classs ".title-form"
+    Scenario:  check register field
+        When I navigate to "/login"
+        Then I should see the button ".btn-register"
         Then I should see the field "#username"
         Then I should see the field "#first_name"
         Then I should see the field "#last_name"
@@ -19,12 +18,26 @@ Feature: Test register page
         Then I should see the button ".btn-register"
 
     @dev
-    Scenario: register fialed
+    Scenario: register success
         When I navigate to "/login"
-        When I try to connect with username "" and firstname "son" and lastname "visal" and pays "Phnom penh " and ville "pp" and email "sonvisal10@gmail.com" and password "Sonvisal15031994"
-        When I try to connect with username "sonvisal" and firstname "" and lastname "visal" and pays "Phnom penh " and ville "pp" and email "sonvisal10@gmail.com" and password "Sonvisal15031994"
-        When I try to connect with username "sonvisal" and firstname "son" and lastname "" and pays "Phnom penh " and ville "pp" and email "sonvisal10@gmail.com" and password "Sonvisal15031994"
-        When I try to connect with username "sonvisal" and firstname "son" and lastname "" and pays "Phnom penh " and ville "pp" and email "sonvisal10@gmail.com" and password "Sonvisal15031994"
-        When I try to connect with username "sonvisal" and firstname "son" and lastname "visal" and pays "" and ville "pp" and email "sonvisal10@gmail.com" and password "Sonvisal15031994"
-        When I try to connect with username "sonvisal" and firstname "" and lastname "visal" and pays "Phnom penh " and ville "" and email "sonvisal10@gmail.com" and password "Sonvisal15031994"
-        When I try to connect with username "sonvisal" and firstname "" and lastname "visal" and pays "Phnom penh " and ville "pp" and email "sonvisal10@gmail.com" and password ""
+        Then I fill the field "#username" with value "daratest"
+        Then I fill the field "#first_name" with value "dara"
+        Then I fill the field "#last_name" with value "test"
+        Then I fill the field "#pays" with value "cambodia"
+        Then I fill the field "#ville" with value "phnom penh"
+        Then I fill the field "#email" with value "dara10@gmail.com"
+        Then I fill the field "#password" with value "dara10@gmail.com"
+        Then I click on the button ".btn-register"
+
+    @dev
+    Scenario: register failed
+        When I navigate to "/login"
+        Then I fill the field "#username" with value ""
+        Then I fill the field "#first_name" with value "dara"
+        Then I fill the field "#last_name" with value "test"
+        Then I fill the field "#pays" with value "cambodia"
+        Then I fill the field "#ville" with value "phnom penh"
+        Then I fill the field "#email" with value "dara10@gmail.com"
+        Then I fill the field "#password" with value ""
+        Then I click on the button ".btn-register"
+        Then I should see the button ".growl-bottom-right"

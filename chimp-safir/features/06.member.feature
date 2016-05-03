@@ -12,7 +12,7 @@ Feature: Test member page
         Then I should see class "well-profile"
 
     @dev
-    Scenario: member fialed
+    Scenario: member failed
         When I not login
         Then I can not go url "/member"
         Then I can not see on url link "/member"

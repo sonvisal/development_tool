@@ -60,20 +60,24 @@ module.exports = function () {
 		browser.setValue('input[name=email]', user);
     	browser.setValue('input[name=password]', pass);
 		// browser.click('#login-button');
-		browser.click('.btn.btn-danger.btn_login');
+		browser.click('.btn_login');
 		// browser.waitForExist('body *');
 		// browser.waitForVisible('body *');
 		// browser.click('#logout-button-footer');
 	});
 
 	this.Then(/^I click on the button "([^"]*)"$/, function (btn) {
-		browser.click(".btn.btn-danger.btn_login");
+		browser.click(btn);
 	});
 
 	// Inputs
 	this.Then(/^I fill the field "([^"]*)" with value "([^"]*)"$/, function (input, value) {
 		browser.setValue(input, value);
 		browser.click(".btn.btn-danger.btn_login");
+	});
+
+	this.Then(/^I should see class "([^"]*)"$/, function (error) {
+		browser.waitForExist('#loginError');
 	});
 
 

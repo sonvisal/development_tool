@@ -11,7 +11,7 @@ Feature: Test logout  page
         Then I click on class "#logout"
         Then I should see url "/login"
     @dev
-    Scenario: logout fialed
+    Scenario: logout failed
         When I click on class  ".dropdown-toggle"
         Then I should see  "#logout"
         Then I click on class "#logout"

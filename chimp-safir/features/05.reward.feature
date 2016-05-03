@@ -12,7 +12,7 @@ Feature: Test reward page
         Then I should see class "well-profile"
 
     @dev
-    Scenario: reward fialed
+    Scenario: reward failed
         When I not login
         Then I can go url "/reward"
         Then I can not see on url link "/reward"

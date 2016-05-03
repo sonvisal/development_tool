@@ -6,18 +6,18 @@ Feature: Test profile page
 
     @dev
     Scenario: profile success
-        When I url to "/login"
-        Then I should see class ".btn_login"
-        Then I should see the field "name='email'"
-        Then I should see the field "name='password'"
+        When I navigate to "/login"
         Then I should see the button ".btn_login"
-        Then I should see url "/profile"
+        When I try to connect with username "mama@gmail.com" and password "root"
+        Then I click on the button ".btn_login"
+        Then I navigate to "/profile"
+        Then I should see the field ".well-profile"
+        Then I should see the field ".h1"
+        Then I should see the field ".btn-profile-black"
 
     @dev
-    Scenario: profile fialed
-        When I url to "/login"
-        Then I should see class ".btn_login"
-        Then I should see the field ""
-        Then I should see the field ""
+    Scenario: profile failed
+        When I navigate to "/login"
         Then I should see the button ".btn_login"
-        Then I can not see url "/profile"
+        When I try to connect with username "" and password "root"
+        Then I should see the button ".btn_login"
