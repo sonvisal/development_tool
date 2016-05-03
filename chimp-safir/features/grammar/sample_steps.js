@@ -57,8 +57,8 @@ module.exports = function () {
 
 	this.Then(/^I try to connect with username "([^"]*)" and password "([^"]*)"$/, function (user, pass) {
 		browser.waitForExist('.btn.btn-danger.btn_login');
-		browser.setValue('#username', user);
-    	browser.setValue('#password', pass);
+		browser.setValue('input[name=email]', user);
+    	browser.setValue('input[name=password]', pass);
 		// browser.click('#login-button');
 		browser.click('.btn.btn-danger.btn_login');
 		// browser.waitForExist('body *');
@@ -67,12 +67,14 @@ module.exports = function () {
 	});
 
 	this.Then(/^I click on the button "([^"]*)"$/, function (btn) {
-		browser.click(btn);
+		browser.click(".btn.btn-danger.btn_login");
 	});
 
 	// Inputs
 	this.Then(/^I fill the field "([^"]*)" with value "([^"]*)"$/, function (input, value) {
 		browser.setValue(input, value);
+		browser.click(".btn.btn-danger.btn_login");
 	});
+
 
 };

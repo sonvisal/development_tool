@@ -1,4 +1,4 @@
-/Feature: Test reward page
+Feature: Test reward page
 
     As a [role]
     I want [feature]

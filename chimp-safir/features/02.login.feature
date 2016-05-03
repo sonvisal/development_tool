@@ -34,15 +34,15 @@ Feature: Test login page
     When I navigate to "/login"
     When I try to connect with username "mama@gmail.com" and password "root"
     When I navigate to "/profile"
-    Then I should see the button ".btn-profile-black"
+    Then I should see the button ".h1-name-profile"
 
-#  @dev
-#  Scenario: Test the error message
-#    When I navigate to "/login"
-#    When I try to connect with username "" and password ""
-#    When I try to connect with username "xyz" and password ""
-#    When I try to connect with username "" and password "xyz"
-#    When I try to connect with username "xyz" and password "xyz"
+  @dev
+  Scenario: Test the error message
+    When I navigate to "/login"
+    When I try to connect with username "" and password ""
+    When I try to connect with username "mama@gmail.com" and password ""
+    When I try to connect with username "" and password "root"
+    When I try to connect with username "xyz" and password "xyz"
 
   # This scenario will run as part of the Meteor dev cycle because it has the @dev tag
   # @focus
