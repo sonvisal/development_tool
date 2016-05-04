@@ -7,8 +7,9 @@ Feature: Test tuto detail  page
     @dev
     Scenario: tuto detail success
         When I navigate to ""
-        Then I click on the button  ".megamenu_drop"
+        Then I should see class  ".megamenu_drop"
         Then I should see the link "/tuto"
+        Then I navigate to "/tuto"
         Then I click on the button ".linkTotulisting"
         Then I should see class "#getPoint"
         Then I click on the button "#getPoint"

@@ -15,9 +15,9 @@ Feature: Test profile page
         Then I should see the field ".h1"
         Then I should see the field ".btn-profile-black"
 
-    @dev
-    Scenario: profile failed
-        When I navigate to "/login"
-        Then I should see the button ".btn_login"
-        When I try to connect with username "" and password "root"
-        Then I should see the button ".btn_login"
+    #@dev
+    #Scenario: profile failed
+        #When I navigate to "/login"
+        #Then I should see the button ".btn_login"
+        #When I try to connect with username "" and password "root"
+        #Then I should see the button ".btn_login"

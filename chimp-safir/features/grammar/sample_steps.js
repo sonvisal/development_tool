@@ -56,7 +56,7 @@ module.exports = function () {
 	// });
 
 	this.Then(/^I try to connect with username "([^"]*)" and password "([^"]*)"$/, function (user, pass) {
-		browser.waitForExist('.btn.btn-danger.btn_login');
+		client.waitForExist('.btn.btn-danger.btn_login');
 		browser.setValue('input[name=email]', user);
     	browser.setValue('input[name=password]', pass);
 		// browser.click('#login-button');
