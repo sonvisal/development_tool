@@ -7,5 +7,5 @@ Feature: Test webzine listing page
     @dev
     Scenario: webzine listing success
         When I navigate to "/webzinelisting"
-        Then I should see url link "/webzinelisting"
         Then I should see class ".spacetop-webzine"
+        Then I should see class ".img-responsive"

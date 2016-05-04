@@ -60,7 +60,7 @@ module.exports = function () {
 		browser.setValue('input[name=email]', user);
     	browser.setValue('input[name=password]', pass);
 		// browser.click('#login-button');
-		browser.waitForExist('.btn_login');
+		client.waitForExist('.btn_login');
 		browser.click('.btn_login');
 		// browser.waitForExist('body *');
 		// browser.waitForVisible('body *');
@@ -68,6 +68,7 @@ module.exports = function () {
 	});
 
 	this.Then(/^I click on the button "([^"]*)"$/, function (btn) {
+		client.waitForExist(btn);
 		browser.click(btn);
 	});
 	// Inputs
@@ -77,7 +78,7 @@ module.exports = function () {
 	});
 
 	this.Then(/^I should see class "([^"]*)"$/, function (classtName) {
-		browser.waitForExist(classtName);
+		client.waitForExist(classtName);
 	});
 
 

@@ -6,7 +6,9 @@ Feature: Test logout  page
 
     @dev
     Scenario: logout success
-        When I click on the button  ".dropdown-toggle"
+        When I navigate to "/login"
+        When I try to connect with username "mama@gmail.com" and password "root"
+        Then I click on the button  ".dropdown-toggle"
         Then I should see class  "#logout"
         Then I click on the button "#logout"
         Then I navigate to "/login"

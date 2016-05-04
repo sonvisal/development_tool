@@ -8,7 +8,7 @@ Feature: Test member page
     Scenario: member success
         When I navigate to "/login"
         When I try to connect with username "mama@gmail.com" and password "root"
-        When I click on the button  ".dropdown-toggle"
+        Then I click on the button  ".dropdown-toggle"
         Then I should see the link "/member"
         Then I should see class ".wapper-member-title"
         Then I should see class ".well-profile"
