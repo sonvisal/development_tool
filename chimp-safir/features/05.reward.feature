@@ -6,8 +6,12 @@ Feature: Test reward page
 
     @dev
     Scenario: reward success
+        When I navigate to "/login"
+        When I try to connect with username "mama@gmail.com" and password "root"
+        When I navigate to "/profile"
         When I click on the button  ".dropdown-toggle"
         Then I should see the link "/reward"
+        When I navigate to "/reward"
         Then I should see the field ".member-pro"
         Then I should see the field ".well-profile"
 

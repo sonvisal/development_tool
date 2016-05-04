@@ -6,7 +6,7 @@ Feature: Test tuto listing  page
 
     @dev
     Scenario: tuto listing success
-        When I click on class  ".megamenu_drop"
+        When I click on the button  ".megamenu_drop"
         Then I should see url link "/tuto"
-        Then I click on class ".linkTotulisting"
+        Then I click on the button ".linkTotulisting"
         Then I should see class "#getPoint"

@@ -13,7 +13,7 @@ Feature: Test login page
     When I navigate to "/login"
     When I try to connect with username "mama@gmail.com" and password "root"
     When I navigate to "/profile"
-    #Then I should see the button ".h1-name-profile"
+    #Then I should see class ".h1-name-profile"
 
   @dev
   Scenario: Test the error message

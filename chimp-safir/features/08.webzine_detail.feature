@@ -6,8 +6,8 @@ Feature: Test webzine detail page
 
     @dev
     Scenario: webzine detail success
-        When I go url "/webzinelisting"
+        When I navigate to "/webzinelisting"
         Then I should see url link "/webzinelisting"
-        Then I click on class ".spacetop-webzine"
+        Then I click on the button ".spacetop-webzine"
         Then I should see class ".mode-img"
         Then I should see class ".pluginButtonContainer"

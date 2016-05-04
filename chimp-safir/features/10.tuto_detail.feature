@@ -6,11 +6,11 @@ Feature: Test tuto detail  page
 
     @dev
     Scenario: tuto detail success
-        When I click on class  ".megamenu_drop"
-        Then I should see url link "/tuto"
-        Then I click on class ".linkTotulisting"
+        When I click on the button  ".megamenu_drop"
+        Then I should see the link "/tuto"
+        Then I click on the button ".linkTotulisting"
         Then I should see class "#getPoint"
-        Then I click on "#getPoint"
-        Then I should see "#mainVideo"
-        Then I should see ".pluginButtonLabel"
-        Then I should see ".space-row-tuto"
+        Then I click on the button "#getPoint"
+        Then I should see class "#mainVideo"
+        Then I should see class ".pluginButtonLabel"
+        Then I should see class ".space-row-tuto"
